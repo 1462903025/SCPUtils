@@ -27,7 +27,7 @@ namespace SCPUtils.Commands
             // TimeSpan playtime;
             if (!sender.CheckPermission("scputils.playtime") && !((CommandSender)sender).FullPermissions)
             {
-                response = "<color=red>You need a higher administration level to use this command!</color>";
+                response = "<color=red>您需要更高的管理级别才能使用此命令！</color>";
                 return false;
             }
             if (arguments.Count < 2)
@@ -44,7 +44,7 @@ namespace SCPUtils.Commands
 
             if (!ServerStatic.GetPermissionsHandler().GetAllGroups().ContainsKey(badge))
             {
-                response = "Invalid role name!";
+                response = "角色名称无效！";
                 return false;
             }
 
@@ -78,7 +78,7 @@ namespace SCPUtils.Commands
 
             if (count == 0)
             {
-                response = "No players found on specified badge!";
+                response = "指定 badge 上找不到玩家！";
                 return false;
             }
 

@@ -18,7 +18,7 @@ namespace SCPUtils.Commands
         {
             if (!sender.CheckPermission("scputils.whitelist"))
             {
-                response = "<color=red> You need a higher administration level to use this command!</color>";
+                response = "<color=red>您需要更高的管理级别才能使用此命令！</color>";
                 return false;
             }
             else if (arguments.Count < 1)
@@ -34,13 +34,13 @@ namespace SCPUtils.Commands
 
                 if (databasePlayer == null)
                 {
-                    response = "<color=yellow>Player not found on Database or Player is loading data!</color>";
+                    response = "<color=yellow>在数据库中找不到玩家，或者玩家正在加载数据！</color>";
                     return false;
                 }
 
                 databasePlayer.ASNWhitelisted = false;
                 Database.LiteDatabase.GetCollection<Player>().Update(databasePlayer);
-                response = "Player has been removed from whitelist!";
+                response = "玩家已从白名单中删除！";
                 return true;
             }
         }

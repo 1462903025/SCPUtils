@@ -19,7 +19,7 @@ namespace SCPUtils.Commands
         {
             if (!sender.CheckPermission("scputils.globaledit"))
             {
-                response = "<color=red>You need a higher administration level to use this command!</color>";
+                response = "<color=red>您需要更高的管理级别才能使用此命令！</color>";
                 return false;
             }
             else
@@ -77,7 +77,7 @@ namespace SCPUtils.Commands
 
             else
             {
-                response = $"One or more arguments are not an integer, Command usage example: {Command} 4 2 1 3";
+                response = $"一个或多个参数不是整数，命令用法示例: {Command} 4 2 1 3";
                 return false;
             }
 

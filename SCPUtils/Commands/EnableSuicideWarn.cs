@@ -18,21 +18,21 @@ namespace SCPUtils.Commands
         {
             if (!sender.CheckPermission("scputils.warnmanagement"))
             {
-                response = "<color=red> You need a higher administration level to use this command!</color>";
+                response = "<color=red> 您需要更高的管理级别才能使用此命令！</color>";
                 return false;
             }
             else if (!SCPUtils.EventHandlers.TemporarilyDisabledWarns)
             {
-                response = "Warns are already enabled";
+                response = "警告已启用";
                 return false;
             }
             else if (!ScpUtils.StaticInstance.Config.EnableSCPSuicideAutoWarn)
             {
-                response = "Suicide / Quit warns are disabled by server config, contact server owner if this is an error!";
+                response = "自杀/退出警告被服务器配置禁用，如果这是一个错误，请联系服务器所有者！";
                 return false;
             }
             EventHandlers.TemporarilyDisabledWarns = false;
-            response = "Suicide and Quit warns have been re-enabled!";
+            response = "自杀和退出警告已重新启用！";
             return true;
         }
     }

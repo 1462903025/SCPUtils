@@ -18,7 +18,7 @@ namespace SCPUtils.Commands
         {
             if (!sender.CheckPermission("scputils.broadcastdelete"))
             {
-                response = "<color=red> You need a higher administration level to use this command!</color>";
+                response = "<color=red>您需要更高的管理级别才能使用此命令！</color>";
                 return false;
             }
 
@@ -33,12 +33,12 @@ namespace SCPUtils.Commands
                 if (Database.LiteDatabase.GetCollection<BroadcastDb>().Exists(broadcast => broadcast.Id == arguments.Array[1].ToString()))
                 {
                     Database.LiteDatabase.GetCollection<BroadcastDb>().Delete(arguments.Array[1].ToString());
-                    response = "Success!";
+                    response = "成功!";
                     return true;
                 }
                 else
                 {
-                    response = "Id does not exist!";
+                    response = "Id不存在！";
                     return false;
                 }
             }

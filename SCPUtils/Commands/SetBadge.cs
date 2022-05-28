@@ -22,7 +22,7 @@ namespace SCPUtils.Commands
             string badge;
             if (!sender.CheckPermission("scputils.handlebadges"))
             {
-                response = "<color=red> You need a higher administration level to use this command!</color>";
+                response = "<color=red>您需要更高的管理级别才能使用此命令！</color>";
                 return false;
             }
 
@@ -55,7 +55,7 @@ namespace SCPUtils.Commands
 
                 if (group.KickPower > ((CommandSender)sender).KickPower && !((CommandSender)sender).FullPermissions)
                 {
-                    response = $"You need a higher administration level to use this command: The group you are trying to set has more kick power than yours. (Your kick power: {((CommandSender)sender).KickPower}, Required: {group.KickPower})";
+                    response = $"您需要更高的管理级别才能使用此命令：您试图设置的组比您的组具有更大的启动能力 (Your kick power: {((CommandSender)sender).KickPower}, Required: {group.KickPower})";
                     return false;
                 }
 

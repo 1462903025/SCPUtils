@@ -26,7 +26,7 @@ namespace SCPUtils.Commands
 
             if (!sender.CheckPermission("scputils.convert") && !((CommandSender)sender).FullPermissions)
             {
-                response = "<color=red>You need a higher administration level to use this command!</color>";
+                response = "<color=red>您需要更高的管理级别才能使用此命令！</color>";
                 return false;
             }
             Log.Info($"Starting conversion, starting checking {Database.LiteDatabase.GetCollection<Player>().Count() } Accounts");

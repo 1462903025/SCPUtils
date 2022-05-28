@@ -23,7 +23,7 @@ namespace SCPUtils.Commands
             }
             else if (((CommandSender)sender).Nickname.Equals("SERVER CONSOLE"))
             {
-                response = "This command cannot be executed from console!";
+                response = "无法从控制台执行此命令！";
                 return false;
             }
             else
@@ -31,7 +31,7 @@ namespace SCPUtils.Commands
                 Exiled.API.Features.Player player = Exiled.API.Features.Player.Get(((CommandSender)sender).SenderId);
                 player.BadgeHidden = true;
                 player.GetDatabasePlayer().HideBadge = true;
-                response = "<color=green>Your badge has been hidden!</color>";
+                response = "<color=green>你的 badge 以隐藏！</color>";
                 return true;
             }
         }

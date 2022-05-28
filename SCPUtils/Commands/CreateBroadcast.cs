@@ -18,7 +18,7 @@ namespace SCPUtils.Commands
         {
             if (!sender.CheckPermission("scputils.broadcastcreate"))
             {
-                response = "<color=red> You need a higher administration level to use this command!</color>";
+                response = "<color=red>您需要更高的管理级别才能使用此命令！</color>";
                 return false;
             }
 
@@ -46,7 +46,7 @@ namespace SCPUtils.Commands
                 }
                 else
                 {
-                    response = "Broadcast duration must be an integer";
+                    response = "广播持续时间必须为整数";
                     return false;
                 }
             }

@@ -25,7 +25,7 @@ namespace SCPUtils.Commands
 
             if (!sender.CheckPermission("scputils.roundinfo.execute") && !ScpUtils.StaticInstance.Config.AllowedMtfInfoTeam.Contains(player.Role.Team) && !ScpUtils.StaticInstance.Config.AllowedChaosInfoTeam.Contains(player.Role.Team))
             {
-                response = "You need a higher administration level to use this command!";
+                response = "您需要更高的管理级别才能使用此命令！";
                 return false;
             }
 

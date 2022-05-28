@@ -46,7 +46,7 @@ namespace SCPUtils.Commands
 
                 if (range > 120)
                 {
-                    response = "<color=red>You can specify a range of max 120 days!</color>";
+                    response = "<color=red>您可以指定最大120天的范围！</color>";
                     return false;
                 }
             }
@@ -76,7 +76,7 @@ namespace SCPUtils.Commands
 
             if (range < 0)
             {
-                response = "<color=red>You have to specify a positive number!</color>";
+                response = "<color=red>您必须指定一个正数！</color>";
                 return false;
             }
 

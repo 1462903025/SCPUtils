@@ -21,7 +21,7 @@ namespace SCPUtils.Commands
         {
             if (!sender.CheckPermission("scputils.onlinelist.basic"))
             {
-                response = "You need a higher administration level to use this command!";
+                response = "您需要更高的管理级别才能使用此命令！";
                 return false;
             }
             StringBuilder message = new StringBuilder($"Online Players ({Exiled.API.Features.Player.Dictionary.Count})");
@@ -95,7 +95,7 @@ namespace SCPUtils.Commands
             }
             if (Exiled.API.Features.Player.Dictionary.Count == 0)
             {
-                response = "No players online!";
+                response = "没有玩家在线！";
                 return true;
             }
             response = message.ToString();

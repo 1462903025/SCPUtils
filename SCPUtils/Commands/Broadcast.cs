@@ -19,7 +19,7 @@ namespace SCPUtils.Commands
         {
             if (!sender.CheckPermission("scputils.broadcast"))
             {
-                response = "<color=red> You need a higher administration level to use this command!</color>";
+                response = "<color=red>您需要更高的管理级别才能使用此命令！</color>";
                 return false;
             }
 
@@ -34,7 +34,7 @@ namespace SCPUtils.Commands
 
                 if (databaseBroadcast == null)
                 {
-                    response = "Invalid broadcast ID!";
+                    response = "无效的广播ID！";
                     return false;
                 }
                 int duration = databaseBroadcast.Seconds;
@@ -43,7 +43,7 @@ namespace SCPUtils.Commands
                     if (int.TryParse(arguments.Array[3].ToString(), out duration)) { }
                     else
                     {
-                        response = "Broadcast duration must be an integer";
+                        response = "广播持续时间必须为整数";
                         return false;
                     }
                 }
@@ -53,12 +53,12 @@ namespace SCPUtils.Commands
                     case "broadcast":
                     case "bc":
                         Map.Broadcast((ushort)duration, databaseBroadcast.Text);
-                        response = "Sending broadcast to all the players!";
+                        response = "向所有玩家发送广播！";
                         break;
                     case "hint":
                     case "h":
                         Map.ShowHint(databaseBroadcast.Text, duration);
-                        response = "Sending hint to all the players!";
+                        response = "向所有玩家发送提示！";
                         break;
                     default:
                         response = "Invalid argument, you should use broadcast/bc or hint/h.";
